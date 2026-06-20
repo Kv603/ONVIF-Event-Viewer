@@ -1,11 +1,27 @@
 {
-  "ip": "192.168.1.184",
-  "username": "onvif",
-  "password": "onvif",
-  "filter": "",
-  "regex": false,
-  "case_sensitive": false,
-  "autoscroll": true,
-  "hide_audio_metrics": true,
-  "theme": "dark"
+  "httpHost": "0.0.0.0",
+  "httpPort": 8088,
+  "pullIntervalSeconds": 2,
+  "pullTimeoutSeconds": 10,
+  "subscriptionTerminationTime": "PT1H",
+  "eventFilter": "",
+  "mqtt": {
+    "enabled": false,
+    "host": "localhost",
+    "port": 1883,
+    "username": "",
+    "password": "",
+    "topic": "onvif/events/{camera}"
+  },
+  "cameras": [
+    {
+      "enabled": false,
+      "cameraName": "Example entrance camera",
+      "ip": "192.0.2.10",
+      "username": "",
+      "password": "",
+      "eventFilter": "",
+      "mqttTopic": ""
+    }
+  ]
 }
